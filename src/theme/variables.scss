@@ -71,10 +71,11 @@ $colors: (
 // default are overridden.
 
 @import "ionic.theme.default";
-
+@import "landing-icon";
 
 // Ionicons
 // --------------------------------------------------
+@import "ionicons";
 // The premium icon font for Ionic. For more info, please see:
 // http://ionicframework.com/docs/ionicons/
 
@@ -87,6 +88,7 @@ $colors: (
 @import "roboto";
 @import "noto-sans";
 
+
 // @font-face {
 //   font-family: "NanumGothic-Regular";
 //   src: local("NanumGothic-Regular"), local("NanumGothic-Regular"), url("../assets/fonts/NanumGothic-Regular.woff") format("woff2");
@@ -94,4 +96,4 @@ $colors: (
 
 @import url('https://fonts.googleapis.com/css?family=Encode+Sans+Expanded:500&subset=vietnamese');
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900&subset=vietnamese');
