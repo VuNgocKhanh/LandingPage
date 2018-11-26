@@ -1,18 +1,29 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title></ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content class="dmm" #pageTop (ionScroll)="onScroll($event)">
-      <div class="padding-content header-bg" padding> 
+<ion-content class="content">
+  <div>
+      <div class="header background-image padding-content" padding>
+          <!-- <div class="a3-container a3-justify-end">
+            <div>ád</div>
+            <div class="menu">Về chúng tôi</div>
+            <div class="menu">Điều lệ sử dụng</div>
+            <div>Liên hệ</div>
+          </div> -->
+
+          <!-- <ion-row>
+            <ion-col col-8>
+              <img src="./assets/imgs/appicon.png" alt="">
+            </ion-col>
+            <ion-col col-2 class="white-color">Về chúng tôi</ion-col>
+            <ion-col col-2 class="white-color">Liên hệ</ion-col>
+          </ion-row> -->
+      
           <ion-row>
-              <ion-col col-7 offset-1 class="a3-container a3-items-center">
+              <ion-col col-7 offset-1 class="header-title a3-container a3-items-center">
                   <div>
                       <div class="white-color big-font font-weight-bold">Ứng dụng <br> Bóng đá 360</div>
                       <div class="white-color margin-bottom normal-font">Ứng dụng bắt đối và tổ chức giải đấu bóng đá dễ dàng và nhanh chóng</div>
                       <div>
-                        <img src="./assets/imgs/ios.png" class="button-download" (click) = "goToStore()">                   
+                        <img src="./assets/imgs/ios.png" class="button-download">
                         <img src="./assets/imgs/google-play.png" class="button-download">
                       </div>
                   </div>      
@@ -21,9 +32,9 @@
               <img src="./assets/imgs/screen.png" class="screen-shot">
             </ion-col>   
           </ion-row>
-      </div>
+        </div>
       
-        <div class="padding-content margin-content">
+        <div class="padding-content">
           <ion-row>
               <ion-col col-6 offset-1 class="big-font a3-container a3-items-center font-weight-bold">Tính năng chính</ion-col>
           </ion-row>
@@ -37,137 +48,14 @@
               <img src="./assets/imgs/screen.png" class="screen-shot">
             </ion-col>
 
-            <ion-col col-5 offset-1 class="a3-container a3-items-center">
-              <div style="width: 100%" >
-                  <div class="a3-container a3-items-center box-shadow feature" *ngFor = "let item of features" padding (click) = "scrollTo(item)">
-                      <ion-icon [name] = "item.icon" padding class="feature-icon-big"></ion-icon>
-                      <div padding class="normal-font font-weight-bold">{{item.name}}</div>
-                  </div>
+            <ion-col col-5 offset-1>
+              <div>
+                
               </div>
+
             </ion-col>
           </ion-row>
         </div>
-
-        <div class="padding-content feature-detail" id = "feature1">
-          <ion-row>
-              <ion-col col-1 offset-1 class="feature-des a3-container a3-items-center">
-                <div class="box-icon a3-container-center">
-                  <ion-icon name = "landing-football" class="feature-icon-normal"></ion-icon>
-                </div>
-              </ion-col>
-              <ion-col col-4 offset-1 class="feature-des a3-container a3-items-center">
-                <div>  
-                    <div class="title-font line-height-big">ĐẶT SÂN, BẮT ĐỐI</div>
-                    <div class="a3-container normal-font line-height-normal">
-                        <div class="feature-icon-small"><ion-icon name = "landing-tick" class="line-height-normal"></ion-icon></div>
-                        <div> Tìm kiếm đối thủ theo các tiêu chí: khu vực, trình độ</div>
-                    </div>
-                    <div class="a3-container normal-font line-height-normal">
-                        <div class="feature-icon-small"><ion-icon name = "landing-tick" class="line-height-normal"></ion-icon></div>
-                        <div> Tìm đặt sân nhanh chóng, dễ dàng</div>  
-                    </div>                    
-                </div>             
-              </ion-col>
-                 
-            <ion-col col-4 offset-1 class="a1-relative">
-              <img class="a1-absolute screen-shot screen-shot-feature" src="./assets/imgs/screen.png">
-            </ion-col>
-          </ion-row>
-        </div>
-
-
-        <div class="padding-content margin-content feature-detail white-background" id = "feature2">
-            <ion-row>
-                <ion-col col-4 offset-1>
-                    <img class="screen-shot" src="./assets/imgs/screen2.png">
-                  </ion-col>
-
-                <ion-col col-1 class="feature-des a3-container a3-items-center">
-                  <div class="box-icon a3-container-center">
-                      <ion-icon name = "landing-constract" class="feature-icon-normal"></ion-icon>
-                  </div>
-                </ion-col>
-                <ion-col col-4 offset-1 class="feature-des a3-container a3-items-center">
-                  <div>
-                      <div class="title-font line-height-big">ĐĂNG BÀI TÌM ĐỐI</div>
-                      <div class="a3-container normal-font line-height-normal">
-                          <div class="feature-icon-small"><ion-icon name = "landing-tick" class="line-height-normal"></ion-icon></div>
-                          <div> Đăng bài tìm đối thủ theo khu vực lựa chọn</div>
-                      </div>
-                      <div class="a3-container normal-font line-height-normal">
-                          <div class="feature-icon-small"><ion-icon name = "landing-tick" class="line-height-normal"></ion-icon></div>
-                          <div> Đăng bài tuyển thành viên, báo cháy nhanh chóng</div>
-                      </div>
-                      
-                  </div>             
-                </ion-col>    
-            </ion-row>
-          </div>
- 
-          <div class="padding-content feature-detail" id = "feature3">
-              <ion-row>
-                  <ion-col col-1 offset-1 class="feature-des a3-container a3-items-center">
-                      <div class="box-icon a3-container-center">
-                          <ion-icon name = "landing-newspaper" class="feature-icon-normal"></ion-icon>
-                      </div>
-                  </ion-col>
-                  <ion-col col-4 offset-1 class="feature-des a3-container a3-items-center">
-                    <div>
-                        <div class="title-font line-height-big">CHỨC NĂNG 360</div>
-                        <div class="a3-container normal-font line-height-normal">
-                          <div class="feature-icon-small"><ion-icon name = "landing-tick" class="line-height-normal"></ion-icon></div>
-                          <div>Chế ảnh vui nhộn, sinh động</div>
-                        </div>
-                        <div class="a3-container normal-font line-height-normal">
-                          <div class="feature-icon-small"><ion-icon name = "landing-tick" class="line-height-normal"></ion-icon></div>
-                          <div>Khung ảnh đa dạng, hài hước</div>
-                        </div>
-                        <div class="a3-container normal-font line-height-normal">
-                            <div class="feature-icon-small"><ion-icon name = "landing-tick" class="line-height-normal"></ion-icon></div>
-                            <div>Chia sẻ ảnh lên mạng xã hội</div>
-                        </div>
-                    </div>             
-                  </ion-col>  
-                     
-                <ion-col col-4 offset-1 class="a1-relative">
-                  <img class="a1-absolute screen-shot screen-shot-feature" src="./assets/imgs/screen3.png">
-                </ion-col>
-              </ion-row>
-            </div>
-
-            <div class="padding-content" margin-bottom>
-              <div class="title-font line-height-big" text-center>Đánh giá từ người dùng</div>
-              <ion-row>
-                <ion-col col-4 *ngFor = "let data of feedback" padding>
-                  <div class="feedback-container">
-                    <ion-list>
-                      <ion-item>
-                          <ion-avatar item-start>
-                            <img [src]="data.avatar">
-                          </ion-avatar>
-                          <h2 class="font-weight-bold">{{data.name}}</h2>
-                          <p>{{data.club}}</p>
-                        </ion-item>
-                      </ion-list>
-                      <div padding>&ldquo;{{data.content}}&rdquo;</div>
-                  </div>
-                </ion-col>
-              </ion-row>
-            </div>
+  </div>
   
-            <div class="footer-container padding-content a3-container a3-items-center">
-                <ion-row style="width: 100%">
-                  <ion-col col-6>@ 2018 - All Right Reserved - Designed by AppInAsia</ion-col>
-                  <ion-col col-2 style="text-align: right" class="font-weight-bold">Điều lệ</ion-col>
-                  <ion-col col-2 style="text-align: right" class="font-weight-bold">Liên hệ</ion-col>
-                  <ion-col col-2 style="text-align: right" class="font-weight-bold">Về chúng tôi</ion-col>
-                </ion-row>
-            </div>
-
-            <ion-fab bottom right id="button-scroll">
-              <button ion-fab (click) = "scroll()"><ion-icon name = "ios-arrow-up-outline"></ion-icon></button>
-            </ion-fab>
-
 </ion-content>
-
-
